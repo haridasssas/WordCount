@@ -1,0 +1,12 @@
+<h2> Total number of words {{ count }}</h2>
+
+{%csrf_token%}
+{{fulltext}}
+<a href="{% url 'home' %}">Count again</a>
+<br/><br/>
+{% for word, counttotal in sortedwords %}
+
+{{word}} {{counttotal}}
+<br/>
+
+{% endfor %}
